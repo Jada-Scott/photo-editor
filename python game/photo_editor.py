@@ -111,11 +111,11 @@ class PhotoEditor:
 
             # Sobel Edge Detection
             sobelx = cv.Sobel(src=img_blur, ddepth=cv.CV_64F, dx=1, dy=0,
-                               ksize=5)  # Sobel Edge Detection on the X axis
+                               ksize=5)
             sobely = cv.Sobel(src=img_blur, ddepth=cv.CV_64F, dx=0, dy=1,
-                               ksize=5)  # Sobel Edge Detection on the Y axis
+                               ksize=5)
             sobelxy = cv.Sobel(src=img_blur, ddepth=cv.CV_64F, dx=1, dy=1,
-                                ksize=5)  # Combined X and Y Sobel Edge Detection
+                                ksize=5)
 
             adjusted_img = cv.Canny(img_blur, 0, self.slider_value)
 
